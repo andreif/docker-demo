@@ -1,7 +1,14 @@
+import asyncio
 import httpx
 import json
 
-r = httpx.get("https://pypi.org/pypi/httpx/json")
+
+async def get(pkg):
+    async with httpx.AsyncClient() as client:
+        return await client.get(f"https://pypi.org/pypi/{pkg}/json")
+
+
+r = asyncio.run(get("httpx"))
 print(r)
 r.raise_for_status()
 data = r.json()
