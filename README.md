@@ -9,3 +9,7 @@ make py  # python shell
 
 make clean  # remove venv and containers
 ```
+
+![Docker](Docker.png)
+
+![DockerCompose](DockerCompose.png)
