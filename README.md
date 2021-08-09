@@ -10,6 +10,8 @@ make py  # python shell
 make clean  # remove venv and containers
 ```
 
+### Configure Python interpreter in PyCharm
+
 ![Docker](Docker.png)
 
 ![DockerCompose](DockerCompose.png)
