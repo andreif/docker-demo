@@ -12,6 +12,10 @@ make clean  # remove venv and containers
 
 ### Configure Python interpreter in PyCharm
 
-![Docker](Docker.png)
+![Docker](screenshots/Docker.png)
 
-![DockerCompose](DockerCompose.png)
+![DockerCompose](screenshots/DockerCompose.png)
+
+![DockerDesktop](screenshots/DockerDesktop.png)
+
+![PyCharm](screenshots/PyCharm.png)
