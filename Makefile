@@ -1,7 +1,7 @@
-RUN = podman-compose run --rm app
+RUN = docker-compose run --rm app
 
 down:
-	podman-compose down
+	docker-compose down
 
 clean: down
 	rm -r venv

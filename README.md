@@ -1,7 +1,13 @@
 # Demo of using Docker for Python projects
 
+When using Podman instead of Pocker:
 ```sh
+alias docker=podman
+alias docker-compose=podman-compose
 make podman  # mounts user home to virtual machine
+```
+
+```sh
 make setup  # create venv and install requirements
 make run  # run script in container
 
