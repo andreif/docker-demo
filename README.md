@@ -1,6 +1,7 @@
 # Demo of using Docker for Python projects
 
 ```sh
+make podman  # mounts user home to virtual machine
 make setup  # create venv and install requirements
 make run  # run script in container
 
