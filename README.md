@@ -1,6 +1,6 @@
 # Demo of using Docker for Python projects
 
-When using Podman instead of Pocker:
+When using Podman instead of Docker:
 ```sh
 alias docker=podman
 alias docker-compose=podman-compose
