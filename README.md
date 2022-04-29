@@ -2,9 +2,27 @@
 
 When using Podman instead of Docker:
 ```sh
+brew install podman
+pip install podman-compose
+
 alias docker=podman
+# or  ln -s /opt/homebrew/bin/podman /opt/homebrew/bin/docker
 alias docker-compose=podman-compose
+# or  ln -s /Users/andrei/.pyenv/shims/podman-compose /Users/andrei/.pyenv/shims/docker-compose
+# or  cat /usr/local/bin/docker-compose
+#!/bin/sh
+/Users/andrei/.pyenv/versions/podman/bin/podman-compose $*
+
+sudo /opt/homebrew/Cellar/podman/4.0.3/bin/podman-mac-helper install
+export DOCKER_HOST='unix:///Users/andrei/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
+
+docker login docker.io
+
 make podman  # mounts user home to virtual machine
+make build
+
+# If containers require root permissions:
+# podman machine set --rootful
 ```
 
 ```sh

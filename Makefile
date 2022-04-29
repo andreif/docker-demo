@@ -4,7 +4,7 @@ down:
 	docker-compose down
 
 clean: down
-	rm -r venv
+	rm -rf venv
 
 venv:
 	${RUN} python -m venv venv
@@ -23,6 +23,6 @@ run:
 
 podman:
 	podman machine stop podman-machine-default || true
-	podman machine rm podman-machine-default --force
-	podman machine init -v ${HOME}:${HOME}
+	podman machine rm podman-machine-default --force || true
+	podman machine init -v "$(shell pwd):$(shell pwd)"
 	podman machine start
